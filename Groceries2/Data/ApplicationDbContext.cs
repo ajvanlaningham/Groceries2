@@ -17,6 +17,7 @@ namespace Groceries2.Data
         public DbSet<Measurement> Measurements { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Recipe> Recipies { get; set; }
+        public DbSet<Item> Items { get; set; }
 
     }
 }
