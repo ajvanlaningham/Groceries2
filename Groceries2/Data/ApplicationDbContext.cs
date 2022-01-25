@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Groceries2.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,8 @@ namespace Groceries2.Data
             : base(options)
         {
         }
+
+        public DbSet<Measurement> Measurements { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
     }
 }
