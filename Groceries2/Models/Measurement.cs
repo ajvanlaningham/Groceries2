@@ -12,7 +12,5 @@ namespace Groceries2.Models
         public int Id { get; set; }
         [Required]
         public string Unit { get; set; }
-
-        public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }

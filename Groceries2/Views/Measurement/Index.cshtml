@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Measurement>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index Measurements</h1>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Measurement Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+            {
+               <tr>
+                   <td width="100%">
+                       @obj.Unit
+                   </td>
+               </tr>
+            }
+    </tbody>
+</table>
