@@ -1,0 +1,40 @@
+﻿@model Recipe
+
+<form method="post">
+    <div class=" boder p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create a New Recipe</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" style="width:25%" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Cuisine"></label>
+            <input asp-for="Cuisine" class="form-control" style="width:25%" placeholder="French? Japanese?" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category">Whats it for?</label>
+            <select asp-for="Category" class="form-control" style="width:25%">
+                <option>Please Select an Option</option>
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+                <option>General Meal</option>
+                <option>Dessert</option>
+                <option>Side</option>
+                <option>Snack</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div style="width:40%">
+            <button type="submit" class=" btn btn-primary mb-3" style="width:40%">
+                <i class="bi bi-plus-circle"></i> &nbsp; Publish Recipe
+            </button>
+            <a asp-controller="Category" asp-action="Index" class="btn btn-secondary mb-3" style="width: 40%">
+                Back to recipes
+            </a>
+         </div>
+    </div>
+</form>

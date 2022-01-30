@@ -22,5 +22,22 @@ namespace Groceries2.Controllers
             IEnumerable<Recipe> objRecipeList = _db.Recipies.ToList();
             return View(objRecipeList);
         }
+
+        //get
+        public IActionResult Create()
+        {
+
+            return View();
+        }
+        //post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Recipe obj)
+        {
+            _db.Recipies.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
     }
 }
