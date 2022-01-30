@@ -9,6 +9,7 @@
         <div class="mb-3">
             <label asp-for="Title"></label>
             <input asp-for="Title" class="form-control" style="width:25%" />
+            <span asp-validation-for="Title" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Cuisine"></label>
@@ -16,8 +17,8 @@
         </div>
         <div class="mb-3">
             <label asp-for="Category">Whats it for?</label>
-            <select asp-for="Category" class="form-control" style="width:25%">
-                <option>Please Select an Option</option>
+            <select asp-for="Category" class="form-control" style="width:25%" placeholder="Please Select an Option">
+                <option></option>
                 <option>Breakfast</option>
                 <option>Lunch</option>
                 <option>Dinner</option>
@@ -27,6 +28,7 @@
                 <option>Snack</option>
                 <option>Other</option>
             </select>
+            <span asp-validation-for="Title" class="text-danger"></span>
         </div>
         <div style="width:40%">
             <button type="submit" class=" btn btn-primary mb-3" style="width:40%">

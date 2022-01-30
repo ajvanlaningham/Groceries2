@@ -34,9 +34,14 @@ namespace Groceries2.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Recipe obj)
         {
-            _db.Recipies.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                _db.Recipies.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            
+            return View(obj);
 
         }
     }
