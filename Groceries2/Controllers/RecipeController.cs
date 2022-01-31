@@ -73,13 +73,69 @@ namespace Groceries2.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Recipies.Add(obj);
+                _db.Recipies.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             return View(obj);
 
+        }
+
+        //get
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var RecipeFromDb = _db.Recipies.Find(id);
+            //var RecipeFromDbFirst = _db.Recipies.FirstOrDefault(i => i.Id == Id);
+            //var RecipeFromDbSingle = _db.Recipies.SingleOrDefault(i => i.Id == Id);
+
+            if (RecipeFromDb == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(RecipeFromDb);
+        }
+        //post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePOST(int? id)
+        {
+            var obj = _db.Recipies.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+       
+       
+                _db.Recipies.Remove(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+     
+        }
+
+        public IActionResult LookSee(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var RecipeFromDb = _db.Recipies.Find(id);
+            //var RecipeFromDbFirst = _db.Recipies.FirstOrDefault(i => i.Id == Id);
+            //var RecipeFromDbSingle = _db.Recipies.SingleOrDefault(i => i.Id == Id);
+
+            if (RecipeFromDb == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(RecipeFromDb);
         }
     }
 }

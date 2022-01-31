@@ -161,3 +161,5 @@ C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\M
 C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Index.cshtml.g.cs
 C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Create.cshtml.g.cs
 C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Edit.cshtml.g.cs
+C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Delete.cshtml.g.cs
+C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\LookSee.cshtml.g.cs

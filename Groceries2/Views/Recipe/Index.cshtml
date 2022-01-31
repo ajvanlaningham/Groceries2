@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Index";
 }
+@if(TempData["success"] != null)
+ {
+    <h2>@TempData["success"]</h2>
+ }
 
 <div class="container p-3">
     <div class="row pt-4">
@@ -31,7 +35,7 @@
                     Type
                 </th>
                 <th>
-
+                    Actions
                 </th>
             </tr>
         </thead>
@@ -40,7 +44,7 @@
             {
                 <tr>
                     <td width="50%">
-                        @recipe.Title
+                        <a asp-controller="Recipe" asp-action="LookSee" asp-route-id="@recipe.Id">@recipe.Title</a>
                     </td>
                     <td width="20%">
                         @recipe.Cuisine
@@ -50,7 +54,8 @@
                     </td>
                     <td width="10%">
                         <div class="w-100 btn-group" role="group">
-                            <a asp-controller="Recipe" asp-action="Edit" asp-route-id="recipe.Id"> <i class="bi bi-pencil-square"></i>Edit</a>
+                            <a asp-controller="Recipe" asp-action="Edit" asp-route-id="@recipe.Id" class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i></a>
+                            <a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.Id" class="btn btn-danger mx-2"> <i class="bi bi-trash-fill"></i></a>
                         </div>
                     </td>
                 </tr>

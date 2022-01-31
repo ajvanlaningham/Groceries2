@@ -1,24 +1,25 @@
 ﻿@model Recipe
 
-<form method="post" asp-action="Edit">
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
     <div class=" boder p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Edit Recipe</h2>
+            <h2 class="text-primary">Delete Recipe</h2>
             <hr />
         </div>
-        <div asp-validation-summary="All"></div>
+        @*<div asp-validation-summary="All"></div>*@
         <div class="mb-3">
             <label asp-for="Title"></label>
-            <input asp-for="Title" class="form-control" style="width:25%" />
-            <span asp-validation-for="Title" class="text-danger"></span>
+            <input asp-for="Title" disabled class="form-control" style="width:25%" />
+            
         </div>
         <div class="mb-3">
             <label asp-for="Cuisine"></label>
-            <input asp-for="Cuisine" class="form-control" style="width:25%" placeholder="French? Japanese?" />
+            <input asp-for="Cuisine" disabled class="form-control" style="width:25%" placeholder="French? Japanese?" />
         </div>
         <div class="mb-3">
             <label asp-for="Category">Whats it for?</label>
-            <select asp-for="Category" class="form-control" style="width:25%" placeholder="Please Select an Option">
+            <select asp-for="Category" disabled class="form-control" style="width:25%" placeholder="Please Select an Option">
                 <option></option>
                 <option>Breakfast</option>
                 <option>Lunch</option>
@@ -29,11 +30,11 @@
                 <option>Snack</option>
                 <option>Other</option>
             </select>
-            <span asp-validation-for="Title" class="text-danger"></span>
+            
         </div>
         <div class="w-25 btn-group" role="group">
-            <button type="submit" class=" btn btn-primary mb-3" style="width:40%">
-                <i class="bi bi-plus-circle"></i> &nbsp; Update Recipe
+            <button type="submit" class=" btn btn-danger mb-3" style="width:40%">
+                <i class="bi bi-plus-circle"></i> &nbsp;Delete Recipe
             </button>
             <a asp-controller="Recipe" asp-action="Index" class="btn btn-secondary mb-3" style="width: 40%">
                 Back to recipes
