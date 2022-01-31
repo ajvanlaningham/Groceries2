@@ -39,6 +39,7 @@ namespace Groceries2.Controllers
             {
                 _db.Recipies.Add(obj);
                 _db.SaveChanges();
+                TempData["success:"] = "The Recipe has been created succesfully!";
                 return RedirectToAction("Index");
             }
             
@@ -75,6 +76,7 @@ namespace Groceries2.Controllers
             {
                 _db.Recipies.Update(obj);
                 _db.SaveChanges();
+                TempData["success:"] = "The Recipe has been updated succesfully!";
                 return RedirectToAction("Index");
             }
 
@@ -113,9 +115,10 @@ namespace Groceries2.Controllers
             }
        
        
-                _db.Recipies.Remove(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+            _db.Recipies.Remove(obj);
+            _db.SaveChanges();
+            TempData["success:"] = "The Recipe has been deleted succesfully!";
+            return RedirectToAction("Index");
      
         }
 
