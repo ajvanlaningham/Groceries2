@@ -31,13 +31,13 @@
             </select>
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
-        <div style="width:40%">
-            <button type="submit" class=" btn btn-primary mb-3" style="width:40%">
-                <i class="bi bi-plus-circle"></i> &nbsp; Publish Recipe
-            </button>
+        <div class="w-25 btn-group" role="group">
             <a asp-controller="Category" asp-action="Index" class="btn btn-secondary mb-3" style="width: 40%">
                 Back to recipes
             </a>
+            <button type="submit" class=" btn btn-primary mb-3" style="width:40%">
+                <i class="bi bi-plus-circle"></i> &nbsp; Publish Recipe
+            </button>
         </div>
     </div>
 </form>

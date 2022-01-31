@@ -14,8 +14,11 @@ namespace Groceries2.Models
         public string Title { get; set; }
         
         public string Cuisine { get; set; }
-        [Required]
+
         public string Category { get; set; }
+
+        [Required]
+        public List<Tag> Tags { get; set; }
 
 
 
