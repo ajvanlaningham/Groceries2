@@ -1,9 +1,9 @@
 ﻿@model Recipe
 
-<form method="post">
+<form method="post" asp-action="Edit">
     <div class=" boder p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Create a New Recipe</h2>
+            <h2 class="text-primary">Edit Recipe</h2>
             <hr />
         </div>
         <div asp-validation-summary="All"></div>
@@ -33,7 +33,7 @@
         </div>
         <div style="width:40%">
             <button type="submit" class=" btn btn-primary mb-3" style="width:40%">
-                <i class="bi bi-plus-circle"></i> &nbsp; Publish Recipe
+                <i class="bi bi-plus-circle"></i> &nbsp; Update Recipe
             </button>
             <a asp-controller="Category" asp-action="Index" class="btn btn-secondary mb-3" style="width: 40%">
                 Back to recipes

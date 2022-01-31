@@ -30,6 +30,9 @@
                 <th>
                     Type
                 </th>
+                <th>
+
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -39,11 +42,16 @@
                     <td width="50%">
                         @recipe.Title
                     </td>
-                    <td width="25%">
+                    <td width="20%">
                         @recipe.Cuisine
                     </td>
-                    <td width="25%">
+                    <td width="20%">
                         @recipe.Category
+                    </td>
+                    <td width="10%">
+                        <div class="w-100 btn-group" role="group">
+                            <a asp-controller="Recipe" asp-action="Edit" asp-route-id="recipe.Id"> <i class="bi bi-pencil-square"></i>Edit</a>
+                        </div>
                     </td>
                 </tr>
             }

@@ -160,3 +160,4 @@ C:\Users\ajvan\source\repos\Groceries2\Groceries2\bin\Debug\net5.0\runtimes\win-
 C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Measurement\Index.cshtml.g.cs
 C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Index.cshtml.g.cs
 C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Create.cshtml.g.cs
+C:\Users\ajvan\source\repos\Groceries2\Groceries2\obj\Debug\net5.0\Razor\Views\Recipe\Edit.cshtml.g.cs
